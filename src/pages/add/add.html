@@ -1,0 +1,24 @@
+<!--
+  Generated template for the AddPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Adicionar Item</ion-title>
+  </ion-navbar>
+  <ion-buttons end>
+      <button (click)="save()"><ion-icon name="checkmark"></ion-icon></button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content padding class="add">
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Novo Item</ion-label>
+            <ion-input type="text" [(ngModel)]="todoItem"></ion-input>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

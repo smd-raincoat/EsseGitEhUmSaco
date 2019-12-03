@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="title title-md">
+      <div class="toolbar-title toolbar-title-md" ng-reflect-klass="toolbar-title" ng-reflect-ng-class="toolbar-title-md" style="font-family:Comfortaa">Materiais Para Viagem</div></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-slides>
+        <div padding class="slide">
+  <ion-list>
+      
+    <button class= "teste" ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <ion-icon [name]="item.icon" item-start></ion-icon>
+      {{item.title}}
+      <div class="item-note" item-end>
+        {{item.note}}
+      </div>
+    </button>
+  </ion-list>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+        </div>
+    </ion-slides>
+</ion-content>

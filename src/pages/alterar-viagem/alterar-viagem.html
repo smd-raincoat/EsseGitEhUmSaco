@@ -1,0 +1,68 @@
+<!--
+  Generated template for the AlterarViagemPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Alterar dados da viagem</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h1>Editar viagem</h1>
+    <div class="slide">
+      <form (ngSubmit)="logForm()">
+        <ion-item>
+          <h3>(*) Obrigatório</h3>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>Título (*)</ion-label>
+          <ion-input type="text" [(ngModel)]="cadastroForm.titulo" name="titulo"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>Data: (dd/mm/yyyy)</ion-label>
+          <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="cadastroForm.data" name="data"></ion-datetime>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>Cidade</ion-label>
+          <ion-input type="text" [(ngModel)]="cadastroForm.cidade" name="cidade"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>Data de partida: (dd/mm/yyyy)</ion-label>
+          <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="cadastroForm.partidaData" name="partidaData">
+          </ion-datetime>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>Hora de partida: (hh/mm)</ion-label>
+          <ion-datetime displayFormat="h:mm A" [(ngModel)]="cadastroForm.partidaHora" name="partidaHora"></ion-datetime>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>Data de retorno: (dd/mm/yyyy)</ion-label>
+          <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="cadastroForm.retornoData" name="retornoData">
+          </ion-datetime>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>Hora de retorno: (hh/mm)</ion-label>
+          <ion-datetime displayFormat="h:mm A" [(ngModel)]="cadastroForm.retornoHora" name="retornoHora"></ion-datetime>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>Observações</ion-label>
+          <ion-textarea rows="5" cols="20" type="text" [(ngModel)]="cadastroForm.observacoes" name="observacoes">
+          </ion-textarea>
+        </ion-item>
+        <button ion-button block type="submit" (click)="goHome()">Seguir</button>
+  
+      </form>
+    </div>
+
+</ion-content>

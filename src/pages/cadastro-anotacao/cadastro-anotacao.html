@@ -1,0 +1,68 @@
+<!--
+  Generated template for the CadastroAnotacaoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title style="padding-left: 70px;">
+      <div class="toolbar-title-toolbar-title-md" ng-reflect-klass="toolbar-title"
+        ng-reflect-ng-class="toolbar-title-md">Novo Ponto</div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div padding class="slide">
+    <h1>Criar ponto</h1>
+    <button ion-button block (click)="cameraOptions()">Adicionar foto</button>
+    <img [src]= imagem />
+      
+    <form (ngSubmit)="logForm()">
+
+      
+      <ion-item>
+        <ion-label floating>Título</ion-label>
+        <ion-textarea [(ngModel)]="cadastroForm.titulo" name="titulo"></ion-textarea>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label floating>Data</ion-label>
+        <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="cadastroForm.data" name="data"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Hora</ion-label>
+        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm a" [(ngModel)]="cadastroForm.hora" name="hora">
+        </ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Coordenada X</ion-label>
+        <ion-input type="text" [(ngModel)]="cadastroForm.coordenadaX" name="coordenadaX"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Coordenada Y</ion-label>
+        <ion-input type="text" [(ngModel)]="cadastroForm.coordenadaY" name="coordenadaY"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Altitude</ion-label>
+        <ion-input type="text" [(ngModel)]="cadastroForm.altitude" name="altitude"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Texto</ion-label>
+        <ion-textarea rows="10" cols="20" [(ngModel)]="cadastroForm.texto" name="texto"></ion-textarea>
+      </ion-item>
+
+      <button ion-button block type="submit" (click)="goViagem()">Seguir</button>
+
+    </form>
+  </div>
+
+</ion-content>

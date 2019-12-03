@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar class="side" color="secondary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title style="font-size: 40px; margin-left: 80px;">Início</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+
+  <div padding class="slide">
+    <ion-toolbar color="secondary" class="pesquisa">
+      <ion-searchbar style="padding: -5px;"></ion-searchbar>
+    </ion-toolbar>
+    <div class="grid">
+      <button ion-button block (click)="goGallery()">Galeria</button>
+      <img class="new" src="assets/imgs/new.png" (click)="goCadastroViagemPage()">
+      <div class="viagembtn" padding *ngFor="let viagem of viagens; let i = index">
+        <button ion-button block (click)="goViagemPage(i)">
+          <img style="width:65%; position:absolute; top:18px;" src="assets/imgs/viagens.png">
+          <label style="position:absolute; top:90px;">{{viagem.titulo}}</label>
+          
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+</ion-content>
